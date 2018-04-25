@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  script(src="/javascripts/jquery-3.2.1.min.js")
+  script(src="/javascripts/ajax.js")
+  script(src="https://d3js.org/d3.v5.min.js")
+  script(src="https://unpkg.com/viz.js@1.8.0/viz.js" type="javascript/worker")
+  script(src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js")
+  div(class="w3-container")
+    header(class="w3-container w3-center w3-teal")
+      h1 Desenhando grafos especificados em DOT
+  div(class="w3-row")
+    div(class="w3-col s6 w3-padding")
+        div(class="w3-container  w3-border w3-light-grey")
+            header(class="w3-container")
+                h4 Input:
+        div(class="w3-container w3-border")
+            textarea(rows="10" cols="50" class="w3-input" placeholder="Input here..." name="intext" id="intext")  
+            div(class="w3-bar w3-pale-green")
+              div(class="w3-bar-item w3-button" id="proc") Processar
+              div(class="w3-bar-item w3-button" id="novo") Novo
+    div(class="w3-col s6 w3-padding")
+        div(class="w3-container w3-border w3-light-grey")
+            header(class="w3-container")
+                div(class="w3-button w3-teal w3-right" id="limpa") Limpar resultados
+                h4 Resultado:
+        div(class="w3-code w3-border w3-center" id="resultado")
+        div(class="w3-button w3-teal" id="limpa") Limpar resultados
+  div(class="w3-container")
+    footer(class="w3-container w3-teal")
+      address Gerado por webDot :: jcr :: 2018-Abril
